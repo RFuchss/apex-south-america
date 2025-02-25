@@ -1,17 +1,4 @@
 @charset "UTF-8";
-/*!
-=========================================================
-* Ollie Landing page
-=========================================================
-
-* Copyright: 2019 DevCRUD (https://devcrud.com)
-* Licensed: (https://devcrud.com/licenses)
-* Coded by www.devcrud.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,400,400i,700,700i,900,900i");
 :root {
   --blue: #007bff;
@@ -67,7 +54,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #161032;
   text-align: left;
   background-color: #fff;
 }
@@ -2195,7 +2182,6 @@ pre code {
   background-color: rgba(0, 0, 0, 0.01);
   border-color: #fbd5d5;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(240, 97, 97, 0.25);
 }
 
 .form-control::-webkit-input-placeholder {
@@ -2771,19 +2757,19 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #f06161;
-  border-color: #f06161;
+  color: #161032;
+  background-color: #FAFF81;
+  border-color: #FAFF81;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #ed3e3e;
-  border-color: #ec3232;
+  background-color: #B26700;
+  border-color: #B26700;
 }
 
 .btn-primary:focus, .btn-primary.focus {
-  box-shadow: 0 0 0 0.2rem rgba(242, 121, 121, 0.5);
+  box-shadow: 0 0 0 0.2rem #B26700;
 }
 
 .btn-primary.disabled, .btn-primary:disabled {
@@ -2795,13 +2781,13 @@ fieldset:disabled a.btn {
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #ec3232;
-  border-color: #ea2727;
+  background-color: #161032;
+  border-color: #161032;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(242, 121, 121, 0.5);
+  box-shadow: 0 0 0 0.2rem #B26700;
 }
 
 .btn-secondary {
@@ -4955,11 +4941,22 @@ input[type="button"].btn-block {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.7);
+  color: #161032;
 }
 
 .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
-  color: rgba(0, 0, 0, 0.95);
+  color: #FFC53A;
+}
+
+.navbar-light .navbar-nav .nav-link.btn:hover {
+  color: #fff;
+}
+.navbar-light .navbar-nav .nav-link.btn:focus {
+  color: #161032;
+}
+
+.navbar-light.navbar.affix-top .navbar-nav .nav-link:hover, .navbar-light.navbar.affix-top .navbar-nav .nav-link:focus {
+  color: #FFC53A;
 }
 
 .navbar-light .navbar-nav .nav-link.disabled {
@@ -7043,8 +7040,9 @@ a.close.disabled {
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
-  color: #fff;
+  color: #FFC53A;
   text-align: center;
+  text-shadow: black 1px 1px 10px;
 }
 
 @-webkit-keyframes spinner-border {
@@ -10776,7 +10774,7 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #f06161 !important;
+  color: #FFC53A !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
@@ -11317,7 +11315,7 @@ p {
 }
 
 .navbar.affix-top .nav-link {
-  color: #fff;
+  color: #161032;
 }
 
 .navbar.affix {
@@ -11437,7 +11435,15 @@ p {
 }
 
 .navbar-nav .nav-link.active {
-  color: #f06161 !important;
+  color: #B26700 !important;
+}
+
+.navbar-nav .nav-link.btn.active {
+  color: #fff !important;
+}
+
+.navbar-nav .nav-link .btn.btn-primary.nav-link.active {
+  color: #fff !important;
 }
 
 @media (max-width: 767.98px) {
@@ -11554,7 +11560,7 @@ pre .code {
   position: relative;
   height: 100vh;
   min-height: 600px;
-  background-image: url(../imgs/header.jpg);
+  background-image: url(../images/header.jpg);
   background-size: cover;
   background-position: center;
   display: -webkit-box;
@@ -11574,8 +11580,7 @@ pre .code {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #2C3E50;
-  opacity: .9;
+  background: #FFFFFF75;
 }
 
 .header .carousel {
@@ -11682,11 +11687,11 @@ pre .code {
 }
 
 .section {
-  padding: 60px 10px;
+  padding: 200px 10px;
 }
 
 .section:nth-child(odd) {
-  background-color: #f1fafb;
+  background-color: #FAF0CA;
 }
 
 .section.p-sm {
@@ -11698,6 +11703,21 @@ pre .code {
 }
 
 .section.bg-overlay {
-  background: #2C3E50;
+  background: #E06D06;
   color: #fff;
+}
+
+.owl-stage {
+  flex: 1; /* Para que todos los elementos tengan el mismo tamaño */
+  display: flex; /* Para centrar vertical y horizontalmente */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  padding: 20px; /* Espacio alrededor de la imagen */
+}
+
+.owl-item .expertises-item img {
+  max-width: 65%; /* Para que la imagen no se salga del contenedor */
+  max-height: 100%; /* Para que la imagen no se salga del contenedor */
+  filter: grayscale(100%); /* Para convertir la imagen a monocromática */
+  object-fit: contain; /* Para que la imagen se ajuste al contenedor sin deformarse */
 }
